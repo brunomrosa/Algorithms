@@ -1,5 +1,5 @@
 /*
- * * Binary search only works on ordered lists
+ * * Ordering lists to use Binary Search
  */
 export class SelectionSort {
   public searchForLowest(list: number[]) {
