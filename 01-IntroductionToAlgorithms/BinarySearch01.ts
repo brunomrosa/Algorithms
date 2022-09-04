@@ -6,7 +6,7 @@ export class BinarySearch {
 
   public execute(target: number, list) {
     let lowest = 0;
-    let higher = list[list.length - 1];
+    let higher = list.length - 1;
 
     while (lowest <= higher) {
       let middle = Math.floor((lowest + higher) / 2);
