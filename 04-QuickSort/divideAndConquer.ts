@@ -41,4 +41,18 @@ export class DivideAndConquer {
       );
     }
   }
+
+  public quickSort(list: number[]): number[] {
+    if (list.length < 2) return list;
+
+    const pivot = list[0];
+
+    const lessThanPivot = list.slice(1).filter((el) => el <= pivot);
+    const greaterThanPivot = list.slice(1).filter((el) => el > pivot);
+
+    return this.quickSort(lessThanPivot).concat(
+      [pivot],
+      this.quickSort(greaterThanPivot)
+    );
+  }
 }
